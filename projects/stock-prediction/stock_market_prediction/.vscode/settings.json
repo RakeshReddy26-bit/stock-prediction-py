@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "**/src": true,
+    "**/backend": true,
+    "**/rewash": true
+  },
+  "github.copilot.advanced": {
+    "contextFileScope": "workspace"
+  }
+}
