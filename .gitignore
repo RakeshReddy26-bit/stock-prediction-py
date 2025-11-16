@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+
+# Env
+.env
+.venv/
+env/
+venv/
+.envrc
+
+# Data & models
+models/
+*.h5
+*.keras
+*.pkl
+*.joblib
+data/
+*.csv
+
+# OS
+.DS_Store
+
+# Node (UI)
+node_modules/
+dist/
+build/
+
+# VSCode
+.vscode/

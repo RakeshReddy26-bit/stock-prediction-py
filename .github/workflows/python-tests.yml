@@ -1,0 +1,28 @@
+name: Python tests (conda)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up conda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          auto-activate-base: false
+          miniconda-version: 'py38_4.12.0'
+      - name: Create environment
+        run: |
+          conda env create --file environment.yml --name stockpy
+          conda activate stockpy
+      - name: Install extras
+        run: |
+          pip install -r requirements.txt || true
+      - name: Run tests
+        run: |
+          pytest -q
