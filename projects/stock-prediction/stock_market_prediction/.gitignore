@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+.venv_test/
+.venv_test
+
+# Data & models
+models/
+*.h5
+*.keras
+*.pkl
+*.joblib
+data/
+*.csv
+
+# OS
+.DS_Store
+
+# Node
+node_modules/
+dist/
+build/
+
+# IDE
+.vscode/
