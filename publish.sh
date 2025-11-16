@@ -75,8 +75,16 @@ else
 fi
 
 # Safety: ensure no large model files are present
-if compgen -G "*.h5" > /dev/null || compgen -G "*.pkl" > /dev/null; then
-  echo "Warning: Found large artifact files (*.h5, *.pkl) in the folder. They will be included if present."
+# Use portable glob check (works in zsh/bash)
+found_artifacts=0
+for f in *.h5 *.pkl *.keras; do
+  if [ -e "$f" ]; then
+    found_artifacts=1
+    break
+  fi
+done
+if [ "$found_artifacts" -eq 1 ]; then
+  echo "Warning: Found large artifact files (*.h5, *.pkl, *.keras) in the folder. They will be included if present."
   echo "If you want them excluded, remove/move them before running this script."
 fi
 

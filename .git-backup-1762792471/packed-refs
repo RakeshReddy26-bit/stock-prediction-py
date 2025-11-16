@@ -1,0 +1,6 @@
+# pack-refs with: peeled fully-peeled sorted 
+23a7a7b1448200eb7c3df91ab2306b87024b76de refs/heads/backup-before-filter
+23a7a7b1448200eb7c3df91ab2306b87024b76de refs/heads/backup-before-large-file-cleanup
+5501d8df848579f00e7e7ac43dc8b0b19565a4dc refs/heads/backup/rewash-before-clean-20251103-063250
+7ab70e4582d900cd2863ee47801c7cf8aeaa3b7a refs/heads/main
+7ab70e4582d900cd2863ee47801c7cf8aeaa3b7a refs/heads/old-local-backup

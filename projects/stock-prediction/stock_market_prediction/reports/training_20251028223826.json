@@ -1,0 +1,30 @@
+{
+  "ticker": "SAMPLE",
+  "rows": 365,
+  "metrics_val": {
+    "rmse": 4.9235451142703415,
+    "mae": 4.161925915590678,
+    "directional_accuracy": 0.5833333333333334
+  },
+  "baseline_val": {
+    "rmse": 2.4669591523897187,
+    "mae": 1.9950217027407382,
+    "directional_accuracy": 0.55
+  },
+  "epochs": 1,
+  "lookback": 60,
+  "bundle": {
+    "ticker": "SAMPLE",
+    "model_path": "/Users/rakeshreddy/rewash/projects/stock-prediction/stock_market_prediction/models/lstm_SAMPLE_20251028223826.keras",
+    "scaler_min_": [
+      -1.7344235883932473
+    ],
+    "scaler_scale_": [
+      0.023969716833732318
+    ],
+    "created_at": "20251028223826",
+    "hash": "74a490cc5a62",
+    "bundle_path": "/Users/rakeshreddy/rewash/projects/stock-prediction/stock_market_prediction/models/model_SAMPLE_20251028223826_74a490cc5a62.pkl"
+  },
+  "timestamp": "2025-10-28T22:38:26.472677"
+}

@@ -1,0 +1,7 @@
+projects/stock-prediction/stock_market_prediction/.venv
+projects/stock-prediction/stock_market_prediction/.venv/lib/python3.12/site-packages/torch/lib/libtorch_cpu.dylib
+projects/stock-prediction/stock_market_prediction/.venv/lib/python3.12/site-packages/tensorflow/libtensorflow_cc.2.dylib
+projects/stock-prediction/stock_market_prediction/.venv/lib/python3.12/site-packages/clang/native/libclang.dylib
+
+rm .git/filter-repo/already_ran
+python3 -m git_filter_repo --invert-paths --paths-from-file paths-to-remove.txt --force

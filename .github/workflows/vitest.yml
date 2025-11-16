@@ -1,0 +1,40 @@
+name: Vitest per-project
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  backend-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install backend dependencies
+        run: |
+          npm ci --prefix backend
+      - name: Run backend tests (CI)
+        env:
+          SKIP_STOCK_INTEGRATION: 'true'
+        run: |
+          npm --prefix backend run test:ci
+
+  frontend-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install frontend dependencies
+        run: |
+          npm ci --prefix frontend
+      - name: Run frontend tests (CI)
+        run: |
+          npm --prefix frontend run test -- --run
