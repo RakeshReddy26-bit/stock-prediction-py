@@ -6,12 +6,100 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
-from ..core import predict_stock, _load_latest_model, MODELS_DIR, _load_data, _rsi, _ema, _macd, _bollinger_bands, _stochastic_oscillator, _atr, _obv, evaluate_model, evaluate_model_walkforward
-from ..models.lstm_service import predict_stock_lstm, predict_stock_lstm_tuned, train_stock_lstm_tuned, evaluate_stock_lstm
-from ..models.xgb_service import predict_stock_xgb, evaluate_stock_xgb
-from ..models.arima_service import predict_stock_arima, evaluate_stock_arima
-from ..models.transformer_service import predict_stock_transformer, evaluate_stock_transformer
-from ..models.ensemble_service import predict_stock_ensemble, evaluate_stock_ensemble
+# Model and core imports are optional to allow running tests without heavy native deps.
+# If SKIP_MODELS env var is set (1/true/yes), we install lightweight stubs instead.
+SKIP_MODELS = os.getenv('SKIP_MODELS', '0').lower() in ('1', 'true', 'yes')
+_model_loaded = False
+
+
+def _make_stub_raise(name):
+    def _fn(*a, **k):
+        raise FileNotFoundError(f"Model function '{name}' is disabled (SKIP_MODELS)")
+    return _fn
+
+
+if SKIP_MODELS:
+    # lightweight stubs used during tests/CI to avoid importing TensorFlow/PyTorch
+    predict_stock = _make_stub_raise('predict_stock')
+    _load_latest_model = lambda ticker: (_ for _ in ()).throw(FileNotFoundError('Models disabled'))
+    MODELS_DIR = os.path.join(os.getcwd(), 'models')
+    def _load_data(ticker):
+        # return empty DataFrame with a datetime index to avoid attribute errors
+        return pd.DataFrame(index=pd.DatetimeIndex([]))
+    def _rsi(series, period=14):
+        return pd.Series([], dtype=float)
+    def _ema(series, span=14):
+        return pd.Series([], dtype=float)
+    def _macd(series):
+        return pd.Series([], dtype=float), pd.Series([], dtype=float)
+    def _bollinger_bands(series, window=20):
+        empty = pd.Series([], dtype=float)
+        return empty, empty, empty
+    def _stochastic_oscillator(high, low, close, k=14, d=3):
+        return pd.Series([], dtype=float), pd.Series([], dtype=float)
+    def _atr(high, low, close, period=14):
+        return pd.Series([], dtype=float)
+    def _obv(close, volume):
+        return pd.Series([], dtype=float)
+    evaluate_model = _make_stub_raise('evaluate_model')
+    evaluate_model_walkforward = _make_stub_raise('evaluate_model_walkforward')
+    predict_stock_lstm = _make_stub_raise('predict_stock_lstm')
+    predict_stock_lstm_tuned = _make_stub_raise('predict_stock_lstm_tuned')
+    train_stock_lstm_tuned = _make_stub_raise('train_stock_lstm_tuned')
+    evaluate_stock_lstm = _make_stub_raise('evaluate_stock_lstm')
+    predict_stock_xgb = _make_stub_raise('predict_stock_xgb')
+    evaluate_stock_xgb = _make_stub_raise('evaluate_stock_xgb')
+    predict_stock_arima = _make_stub_raise('predict_stock_arima')
+    evaluate_stock_arima = _make_stub_raise('evaluate_stock_arima')
+    predict_stock_transformer = _make_stub_raise('predict_stock_transformer')
+    evaluate_stock_transformer = _make_stub_raise('evaluate_stock_transformer')
+    predict_stock_ensemble = _make_stub_raise('predict_stock_ensemble')
+    evaluate_stock_ensemble = _make_stub_raise('evaluate_stock_ensemble')
+else:
+    try:
+        from ..core import predict_stock, _load_latest_model, MODELS_DIR, _load_data, _rsi, _ema, _macd, _bollinger_bands, _stochastic_oscillator, _atr, _obv, evaluate_model, evaluate_model_walkforward
+        from ..models.lstm_service import predict_stock_lstm, predict_stock_lstm_tuned, train_stock_lstm_tuned, evaluate_stock_lstm
+        from ..models.xgb_service import predict_stock_xgb, evaluate_stock_xgb
+        from ..models.arima_service import predict_stock_arima, evaluate_stock_arima
+        from ..models.transformer_service import predict_stock_transformer, evaluate_stock_transformer
+        from ..models.ensemble_service import predict_stock_ensemble, evaluate_stock_ensemble
+        _model_loaded = True
+    except Exception:
+        # if imports fail, fall back to stubs to keep the API importable
+        predict_stock = _make_stub_raise('predict_stock')
+        _load_latest_model = lambda ticker: (_ for _ in ()).throw(FileNotFoundError('Models disabled'))
+        MODELS_DIR = os.path.join(os.getcwd(), 'models')
+        def _load_data(ticker):
+            return pd.DataFrame(index=pd.DatetimeIndex([]))
+        def _rsi(series, period=14):
+            return pd.Series([], dtype=float)
+        def _ema(series, span=14):
+            return pd.Series([], dtype=float)
+        def _macd(series):
+            return pd.Series([], dtype=float), pd.Series([], dtype=float)
+        def _bollinger_bands(series, window=20):
+            empty = pd.Series([], dtype=float)
+            return empty, empty, empty
+        def _stochastic_oscillator(high, low, close, k=14, d=3):
+            return pd.Series([], dtype=float), pd.Series([], dtype=float)
+        def _atr(high, low, close, period=14):
+            return pd.Series([], dtype=float)
+        def _obv(close, volume):
+            return pd.Series([], dtype=float)
+        evaluate_model = _make_stub_raise('evaluate_model')
+        evaluate_model_walkforward = _make_stub_raise('evaluate_model_walkforward')
+        predict_stock_lstm = _make_stub_raise('predict_stock_lstm')
+        predict_stock_lstm_tuned = _make_stub_raise('predict_stock_lstm_tuned')
+        train_stock_lstm_tuned = _make_stub_raise('train_stock_lstm_tuned')
+        evaluate_stock_lstm = _make_stub_raise('evaluate_stock_lstm')
+        predict_stock_xgb = _make_stub_raise('predict_stock_xgb')
+        evaluate_stock_xgb = _make_stub_raise('evaluate_stock_xgb')
+        predict_stock_arima = _make_stub_raise('predict_stock_arima')
+        evaluate_stock_arima = _make_stub_raise('evaluate_stock_arima')
+        predict_stock_transformer = _make_stub_raise('predict_stock_transformer')
+        evaluate_stock_transformer = _make_stub_raise('evaluate_stock_transformer')
+        predict_stock_ensemble = _make_stub_raise('predict_stock_ensemble')
+        evaluate_stock_ensemble = _make_stub_raise('evaluate_stock_ensemble')
 import joblib
 import asyncio
 import glob

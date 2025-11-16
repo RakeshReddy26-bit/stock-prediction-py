@@ -1,0 +1,117 @@
+Metadata-Version: 2.4
+Name: stock_market_prediction
+Version: 0.0.0
+Summary: Stock market prediction microservice (split from monorepo)
+Author: Rakesh Reddy
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Stock Market Prediction (LSTM) — CLI + API
+
+Productionized LSTM stock predictor with a CLI (train/eval/predict/backtest), data validation, model bundles, a FastAPI service, and Docker files.
+
+## Environment
+
+Pinned CPU-only environment (Python 3.10+). Quick setup:
+
+```bash
+bash scripts/setup_env.sh
+source .venv/bin/activate
+```
+
+Validate:
+
+```bash
+python -c "import tensorflow as tf, pandas as pd; print(tf.__version__, pd.__version__)"
+```
+
+## Data
+
+- Local CSV fallback: `stock_data.csv` with columns: `Date,Open,High,Low,Close,Volume`.
+- Generate sample: `python generate_sample_data.py` (schema-validated).
+
+## CLI modes
+
+All commands run from this folder with the venv activated.
+
+- Train and persist model bundle (.keras + bundle JSON):
+   ```bash
+   python stock_market_prediction.py --mode train --ticker SAMPLE --epochs 5
+   ```
+
+- Evaluate latest bundle (TimeSeriesSplit CV summary included):
+   ```bash
+   python stock_market_prediction.py --mode eval --ticker SAMPLE
+   ```
+
+- Predict next close with latest bundle:
+   ```bash
+   python stock_market_prediction.py --mode predict --ticker SAMPLE
+   ```
+
+- Backtest (walk-forward next-day predictions + strategy metrics):
+   ```bash
+   python stock_market_prediction.py --mode backtest --ticker SAMPLE --periods-per-year 252
+   ```
+
+Artifacts are written to:
+
+- Models: `models/lstm_<TICKER>_<TS>.keras` and `models/model_<TICKER>_<TS>_<hash>.pkl` (JSON bundle)
+- Reports: `reports/training_*.json`, `reports/eval_*.json`, `reports/backtest_*.json`
+
+Bundle JSON stores scaler stats and model path for reliable inference.
+
+## Quick predictors
+
+- SMA baseline: `quick_predict.py`
+- LSTM quick predictor: `quick_predict_lstm.py` (uses bundle `.keras` if present; falls back to legacy `lstm_stock_model.h5`)
+
+Example:
+
+```bash
+python quick_predict_lstm.py --ticker AAPL --period 6mo --interval 1d
+```
+
+## FastAPI service
+
+Run locally:
+
+```bash
+uvicorn src.api.main:app --host 127.0.0.1 --port 8010 --app-dir .
+```
+
+Endpoints:
+
+- GET `/api/v1/health`
+- GET `/api/v1/models`
+- GET `/api/v1/models/info?ticker=AAPL`
+- GET `/api/v1/stocks/{ticker}/history`
+- GET `/api/v1/stocks/{ticker}/indicators`
+- POST `/api/v1/predict` with `{ ticker, days, model }` where model ∈ {rf,lstm,lstm_tuned,xgb,arima,transformer,ensemble}
+- GET `/api/v1/stocks/{ticker}/predict?days=30&model=rf`
+- POST `/api/v1/tune` with `{ ticker, n_trials, timeout_sec }`
+- GET `/api/v1/stocks/{ticker}/backtest?model=rf&mode=static|walk`
+
+Docker:
+
+```bash
+docker compose up --build
+```
+
+## UI Features
+
+- Candlesticks, volume, SMA overlays, dark mode
+- Prediction line with 95% CI, up-probability, risk score, next-step volatility
+- Range selector, model & horizon controls, tuning button
+- Backtesting panel (all models), walk-forward option for RF
+- Export: PNG (chart), CSV (predictions+CI), JSON (predictions/backtest)
+
+## Notes and limits
+
+- This is an educational system. Not financial advice.
+- Model format: Keras native `.keras` with JSON bundle metadata.
+- yfinance network requests can fail; retry externally if needed.
+
+## License
+
+MIT

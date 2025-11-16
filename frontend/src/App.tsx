@@ -34,5 +34,6 @@ export default function App() {
       {/* Fallback to services for unknown routes while developing */}
       <Route path="*" element={<Services />} />
     </Routes>
+    </>
   );
 }
