@@ -11,18 +11,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Set up conda
+
+      - name: Set up conda and create env
         uses: conda-incubator/setup-miniconda@v2
         with:
           auto-activate-base: false
-          python-version: '3.8' # <-- Specify the Python version like this
-      - name: Create environment
-        run: |
-          conda env create --file environment.yml --name stockpy
-          conda activate stockpy
+          python-version: '3.8'
+          environment-file: environment.yml
+          activate-environment: stockpy
+
       - name: Install extras
         run: |
           pip install -r requirements.txt || true
+        shell: bash -l {0} # This tells the step to use the activated conda env
+
       - name: Run tests
         run: |
           pytest -q
+        shell: bash -l {0} # This also tells the step to use the activated env
