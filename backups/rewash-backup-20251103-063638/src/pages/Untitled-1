@@ -1,0 +1,4 @@
+// Check these files for hardcoded paths
+// - src/components/ProtectedRoute.tsx
+// - src/contexts/AuthContext.tsx  
+// - src/pages/Dashboard.tsx

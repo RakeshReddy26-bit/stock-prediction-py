@@ -1,0 +1,10 @@
+<div className="mt-8">
+  <h2 className="text-2xl font-bold text-gray-900">Selected Items</h2>
+  <ul className="list-disc list-inside text-gray-700">
+    {selectedItems.map((item, index) => (
+      <li key={index}>
+        {item.label} - {item.price}
+      </li>
+    ))}
+  </ul>
+</div>
