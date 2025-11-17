@@ -1,0 +1,75 @@
+{
+  "name": "task-management",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/react": "^2.10.9",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@types/file-saver": "^2.0.7",
+    "@types/firebase": "^2.4.32",
+    "@types/node": "^24.9.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@types/react-icons": "^2.2.7",
+    "@types/react-query": "^1.2.8",
+    "@types/react-router-dom": "^5.3.3",
+    "file-saver": "^2.0.5",
+    "firebase": "^12.4.0",
+    "framer-motion": "^12.23.24",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.5.0",
+    "react-query": "^3.39.3",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^7.6.3",
+    "typescript": "^5.9.3",
+    "zustand": "^5.0.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.16",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@vitejs/plugin-react": "^5.1.0",
+    "@vitest/ui": "^4.0.4",
+    "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
+    "jsdom": "^27.0.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.16",
+    "vite": "^7.0.4",
+    "vitest": "^4.0.4"
+  },
+  "scripts": {
+    "dev": "vite --config vite.config.js",
+    "start": "vite --config vite.config.js",
+    "build": "vite build --config vite.config.js",
+    "preview": "vite preview --port 3001",
+    "test": "vitest",
+    "test:frontend": "vitest",
+    "test:backend": "npm --prefix backend test",
+    "test:all": "npm run test:frontend && npm run test:backend",
+    "dev:backend": "npm --prefix backend run dev",
+    "build:backend": "npm --prefix backend run build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

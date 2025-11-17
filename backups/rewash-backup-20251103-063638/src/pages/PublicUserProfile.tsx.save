@@ -1,0 +1,46 @@
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../firebase';
+import { Box, Avatar, Heading, Text, Spinner, Center } from '@chakra-ui/react';
+
+const PublicUserProfile: React.FC = () => {
+  const { id } = useParams<{ id: string }>();
+  const [user, setUser] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      if (!id) return;
+      const userRef = doc(db, 'users', id);
+      const userSnap = await getDoc(userRef);
+      if (userSnap.exists()) {
+        setUser(userSnap.data());
+      }
+      setLoading(false);
+    };
+    fetchUser();
+  }, [id]);
+
+  if (loading) return <Center py={10}><Spinner size="xl" /></Center>;
+  if (!user) return <Center py={10}><Text>User not found.</Text></Center>;
+
+  return (
+    <Center py={10}>
+      <Box p={8} bg="white" borderRadius="lg" boxShadow="md" minW="350px">
+        <Center>
+          <Avatar size="xl" name={user.displayName || user.email} src={user.avatarUrl} mb={4} />
+        </Center>
+        <Heading as="h2" size="lg" textAlign="center" mb={2}>
+          {user.displayName || 'User Profile'}
+        </Heading>
+        <Text textAlign="center" color="gray.500" mb={4}>{user.email}</Text>
+        {/* Add more public info/stats here if desired */}
+      </Box>
+    </Center>
+  );
+};
+
+export default PublicUserProfile;
+
+
