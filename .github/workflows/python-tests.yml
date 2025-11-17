@@ -15,7 +15,7 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2
         with:
           auto-activate-base: false
-          miniconda-version: 'py38_4.12.0'
+          python-version: '3.8' # <-- Specify the Python version like this
       - name: Create environment
         run: |
           conda env create --file environment.yml --name stockpy
