@@ -26,7 +26,17 @@ jobs:
 
       - name: Install root node deps (if present or PostCSS config at repo root)
         if: "(exists('package.json') || exists('postcss.config.js'))"
-        run: |
+        steps:
+          - name: Cache root npm
+            uses: actions/cache@v4
+            with:
+              path: ~/.npm
+              key: ${{ runner.os }}-node-root-${{ hashFiles('package-lock.json') }}
+              restore-keys: |
+                ${{ runner.os }}-node-root-
+
+          - name: Install root node deps
+            run: |
           echo "Installing node dependencies at repo root"
           if [ -f pnpm-lock.yaml ] || [ -f pnpm-lock.yml ]; then
             echo "Using pnpm at repo root"
@@ -45,23 +55,33 @@ jobs:
 
       - name: Install backend node deps (if present)
         if: "exists('backend/package.json')"
-        working-directory: ./backend
-        run: |
-          echo "Installing backend node dependencies in ./backend"
-          if [ -f pnpm-lock.yaml ] || [ -f pnpm-lock.yml ]; then
-            echo "Using pnpm in backend"
-            npm i -g pnpm
-            pnpm install --frozen-lockfile
-          elif [ -f package-lock.json ]; then
-            echo "Using npm in backend"
-            npm ci
-          elif [ -f yarn.lock ]; then
-            echo "Using yarn in backend"
-            yarn install --frozen-lockfile
-          else
-            echo "No lockfile in backend, falling back to npm install"
-            npm install
-          fi
+        steps:
+          - name: Cache backend node_modules
+            uses: actions/cache@v4
+            with:
+              path: backend/node_modules
+              key: ${{ runner.os }}-node-backend-${{ hashFiles('backend/package-lock.json') }}
+              restore-keys: |
+                ${{ runner.os }}-node-backend-
+
+          - name: Install backend node deps
+            working-directory: ./backend
+            run: |
+              echo "Installing backend node dependencies in ./backend"
+              if [ -f pnpm-lock.yaml ] || [ -f pnpm-lock.yml ]; then
+                echo "Using pnpm in backend"
+                npm i -g pnpm
+                pnpm install --frozen-lockfile
+              elif [ -f package-lock.json ]; then
+                echo "Using npm in backend"
+                npm ci
+              elif [ -f yarn.lock ]; then
+                echo "Using yarn in backend"
+                yarn install --frozen-lockfile
+              else
+                echo "No lockfile in backend, falling back to npm install"
+                npm install
+              fi
 
       - name: Setup Python
         uses: actions/setup-python@v4
