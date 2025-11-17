@@ -23,6 +23,33 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Ensure @tailwindcss/postcss plugin available (no package change)
+        run: |
+          echo "Installing @tailwindcss/postcss at repo root (no-save) to satisfy PostCSS plugin lookup"
+          npm install @tailwindcss/postcss --no-save --no-audit || true
+
+      - name: Install root node deps (if present or PostCSS config at repo root)
+        run: |
+          if [ -f package.json ] || [ -f postcss.config.js ]; then
+            echo "Detected package.json or postcss.config.js at repo root"
+            if [ -f pnpm-lock.yaml ] || [ -f pnpm-lock.yml ]; then
+              echo "Using pnpm at repo root"
+              npm i -g pnpm
+              pnpm install --frozen-lockfile
+            elif [ -f package-lock.json ]; then
+              echo "Using npm at repo root"
+              npm ci
+            elif [ -f yarn.lock ]; then
+              echo "Using yarn at repo root"
+              yarn install --frozen-lockfile
+            else
+              echo "No lockfile at repo root, falling back to npm install"
+              npm install
+            fi
+          else
+            echo "No root package.json or postcss.config.js — skipping root Node install"
+          fi
+
       - name: Install backend node deps (if present)
         run: |
           if [ -d backend ] && [ -f backend/package.json ]; then
