@@ -31,3 +31,4 @@ build/
 
 # VSCode
 .vscode/
+stock_market_prediction/run-*.log
