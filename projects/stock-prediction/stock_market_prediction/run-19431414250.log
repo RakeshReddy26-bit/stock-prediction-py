@@ -1,0 +1,529 @@
+backend-tests	Set up job	﻿2025-11-17T13:33:18.4726380Z Current runner version: '2.329.0'
+backend-tests	Set up job	2025-11-17T13:33:18.4765702Z ##[group]Runner Image Provisioner
+backend-tests	Set up job	2025-11-17T13:33:18.4767228Z Hosted Compute Agent
+backend-tests	Set up job	2025-11-17T13:33:18.4768136Z Version: 20251016.436
+backend-tests	Set up job	2025-11-17T13:33:18.4769189Z Commit: 8ab8ac8bfd662a3739dab9fe09456aba92132568
+backend-tests	Set up job	2025-11-17T13:33:18.4770655Z Build Date: 2025-10-15T20:44:12Z
+backend-tests	Set up job	2025-11-17T13:33:18.4771532Z ##[endgroup]
+backend-tests	Set up job	2025-11-17T13:33:18.4772499Z ##[group]Operating System
+backend-tests	Set up job	2025-11-17T13:33:18.4773339Z Ubuntu
+backend-tests	Set up job	2025-11-17T13:33:18.4774059Z 24.04.3
+backend-tests	Set up job	2025-11-17T13:33:18.4774855Z LTS
+backend-tests	Set up job	2025-11-17T13:33:18.4775592Z ##[endgroup]
+backend-tests	Set up job	2025-11-17T13:33:18.4776367Z ##[group]Runner Image
+backend-tests	Set up job	2025-11-17T13:33:18.4777400Z Image: ubuntu-24.04
+backend-tests	Set up job	2025-11-17T13:33:18.4778272Z Version: 20251112.124.1
+backend-tests	Set up job	2025-11-17T13:33:18.4780137Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251112.124/images/ubuntu/Ubuntu2404-Readme.md
+backend-tests	Set up job	2025-11-17T13:33:18.4782767Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251112.124
+backend-tests	Set up job	2025-11-17T13:33:18.4784921Z ##[endgroup]
+backend-tests	Set up job	2025-11-17T13:33:18.4786876Z ##[group]GITHUB_TOKEN Permissions
+backend-tests	Set up job	2025-11-17T13:33:18.4789827Z Contents: read
+backend-tests	Set up job	2025-11-17T13:33:18.4790846Z Metadata: read
+backend-tests	Set up job	2025-11-17T13:33:18.4792326Z Packages: read
+backend-tests	Set up job	2025-11-17T13:33:18.4793216Z ##[endgroup]
+backend-tests	Set up job	2025-11-17T13:33:18.4796923Z Secret source: Actions
+backend-tests	Set up job	2025-11-17T13:33:18.4798653Z Prepare workflow directory
+backend-tests	Set up job	2025-11-17T13:33:18.5303800Z Prepare all required actions
+backend-tests	Set up job	2025-11-17T13:33:18.5366429Z Getting action download info
+backend-tests	Set up job	2025-11-17T13:33:18.7637592Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+backend-tests	Set up job	2025-11-17T13:33:18.8872236Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+backend-tests	Set up job	2025-11-17T13:33:19.1273944Z Complete job name: backend-tests
+backend-tests	Run actions/checkout@v4	﻿2025-11-17T13:33:19.1972149Z ##[group]Run actions/checkout@v4
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.1973018Z with:
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.1973521Z   repository: RakeshReddy26-bit/stock-prediction-py
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.1974352Z   token: ***
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.1974768Z   ssh-strict: true
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.1975172Z   ssh-user: git
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.1975573Z   persist-credentials: true
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.1976033Z   clean: true
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.1976439Z   sparse-checkout-cone-mode: true
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.1976924Z   fetch-depth: 1
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.1977310Z   fetch-tags: false
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.1977735Z   show-progress: true
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.1978131Z   lfs: false
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.1978645Z   submodules: false
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.1979054Z   set-safe-directory: true
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.1979749Z ##[endgroup]
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3146637Z Syncing repository: RakeshReddy26-bit/stock-prediction-py
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3149741Z ##[group]Getting Git version info
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3151374Z Working directory is '/home/runner/work/stock-prediction-py/stock-prediction-py'
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3153447Z [command]/usr/bin/git version
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3222795Z git version 2.51.2
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3252034Z ##[endgroup]
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3269443Z Temporarily overriding HOME='/home/runner/work/_temp/d215af99-5379-4f59-b6f6-fddd88bf22f3' before making global git config changes
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3272037Z Adding repository directory to the temporary git global config as a safe directory
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3285413Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/stock-prediction-py/stock-prediction-py
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3328792Z Deleting the contents of '/home/runner/work/stock-prediction-py/stock-prediction-py'
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3333560Z ##[group]Initializing the repository
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3338955Z [command]/usr/bin/git init /home/runner/work/stock-prediction-py/stock-prediction-py
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3455528Z hint: Using 'master' as the name for the initial branch. This default branch name
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3457021Z hint: is subject to change. To configure the initial branch name to use in all
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3458678Z hint: of your new repositories, which will suppress this warning, call:
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3460199Z hint:
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3461053Z hint: 	git config --global init.defaultBranch <name>
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3462432Z hint:
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3463412Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3464967Z hint: 'development'. The just-created branch can be renamed via this command:
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3466180Z hint:
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3466855Z hint: 	git branch -m <name>
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3467619Z hint:
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3468643Z hint: Disable this message with "git config set advice.defaultBranchName false"
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3470826Z Initialized empty Git repository in /home/runner/work/stock-prediction-py/stock-prediction-py/.git/
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3476295Z [command]/usr/bin/git remote add origin https://github.com/RakeshReddy26-bit/stock-prediction-py
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3516243Z ##[endgroup]
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3517412Z ##[group]Disabling automatic garbage collection
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3522063Z [command]/usr/bin/git config --local gc.auto 0
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3555219Z ##[endgroup]
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3556488Z ##[group]Setting up auth
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3564262Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3599319Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3958650Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.3993848Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.4230565Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.4284970Z ##[endgroup]
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.4286309Z ##[group]Fetching the repository
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.4298191Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +6fccf00a8f30bb9ca9ce396bff60bd4aecc56753:refs/remotes/origin/main
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:21.5036626Z From https://github.com/RakeshReddy26-bit/stock-prediction-py
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:21.5038707Z  * [new ref]         6fccf00a8f30bb9ca9ce396bff60bd4aecc56753 -> origin/main
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:21.5075452Z ##[endgroup]
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:21.5076889Z ##[group]Determining the checkout info
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:21.5078915Z ##[endgroup]
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:21.5083409Z [command]/usr/bin/git sparse-checkout disable
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:21.5130690Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:21.5164097Z ##[group]Checking out the ref
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:21.5168386Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:22.1648639Z Switched to a new branch 'main'
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:22.1649895Z branch 'main' set up to track 'origin/main'.
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:22.1687270Z ##[endgroup]
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:22.1727645Z [command]/usr/bin/git log -1 --format=%H
+backend-tests	Run actions/checkout@v4	2025-11-17T13:33:22.1750890Z 6fccf00a8f30bb9ca9ce396bff60bd4aecc56753
+backend-tests	Use Node.js	﻿2025-11-17T13:33:22.1982167Z ##[group]Run actions/setup-node@v4
+backend-tests	Use Node.js	2025-11-17T13:33:22.1982563Z with:
+backend-tests	Use Node.js	2025-11-17T13:33:22.1982775Z   node-version: 18
+backend-tests	Use Node.js	2025-11-17T13:33:22.1983008Z   always-auth: false
+backend-tests	Use Node.js	2025-11-17T13:33:22.1983237Z   check-latest: false
+backend-tests	Use Node.js	2025-11-17T13:33:22.1983632Z   token: ***
+backend-tests	Use Node.js	2025-11-17T13:33:22.1983853Z ##[endgroup]
+backend-tests	Use Node.js	2025-11-17T13:33:22.4012045Z Attempting to download 18...
+backend-tests	Use Node.js	2025-11-17T13:33:22.7251146Z Acquiring 18.20.8 - x64 from https://github.com/actions/node-versions/releases/download/18.20.8-14110393767/node-18.20.8-linux-x64.tar.gz
+backend-tests	Use Node.js	2025-11-17T13:33:23.0984578Z Extracting ...
+backend-tests	Use Node.js	2025-11-17T13:33:23.1128848Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/b6d68e3b-c131-4376-a239-046c70751ce6 -f /home/runner/work/_temp/46f76506-45f7-41b3-97ca-f9ffbfcc8e68
+backend-tests	Use Node.js	2025-11-17T13:33:24.1522835Z Adding to the cache ...
+backend-tests	Use Node.js	2025-11-17T13:33:25.9958512Z ##[group]Environment details
+backend-tests	Use Node.js	2025-11-17T13:33:26.3992170Z node: v18.20.8
+backend-tests	Use Node.js	2025-11-17T13:33:26.3992963Z npm: 10.8.2
+backend-tests	Use Node.js	2025-11-17T13:33:26.3996658Z yarn: 1.22.22
+backend-tests	Use Node.js	2025-11-17T13:33:26.3997431Z ##[endgroup]
+backend-tests	Install backend dependencies	﻿2025-11-17T13:33:26.4174093Z ##[group]Run npm ci --prefix backend
+backend-tests	Install backend dependencies	2025-11-17T13:33:26.4174692Z [36;1mnpm ci --prefix backend[0m
+backend-tests	Install backend dependencies	2025-11-17T13:33:26.4224447Z shell: /usr/bin/bash -e {0}
+backend-tests	Install backend dependencies	2025-11-17T13:33:26.4224854Z ##[endgroup]
+backend-tests	Install backend dependencies	2025-11-17T13:33:29.1715121Z npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+backend-tests	Install backend dependencies	2025-11-17T13:33:29.6692394Z npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+backend-tests	Install backend dependencies	2025-11-17T13:33:29.6963242Z npm warn deprecated lodash.get@4.4.2: This package is deprecated. Use the optional chaining (?.) operator instead.
+backend-tests	Install backend dependencies	2025-11-17T13:33:29.9555494Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+backend-tests	Install backend dependencies	2025-11-17T13:33:30.0881372Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+backend-tests	Install backend dependencies	2025-11-17T13:33:31.1704894Z npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+backend-tests	Install backend dependencies	2025-11-17T13:33:31.1957815Z npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+backend-tests	Install backend dependencies	2025-11-17T13:33:31.4875584Z npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+backend-tests	Install backend dependencies	2025-11-17T13:33:31.5230683Z npm warn deprecated glob@7.1.6: Glob versions prior to v9 are no longer supported
+backend-tests	Install backend dependencies	2025-11-17T13:33:33.0798645Z npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+backend-tests	Install backend dependencies	2025-11-17T13:33:36.4347797Z 
+backend-tests	Install backend dependencies	2025-11-17T13:33:36.4348573Z added 695 packages, and audited 696 packages in 10s
+backend-tests	Install backend dependencies	2025-11-17T13:33:36.4349492Z 
+backend-tests	Install backend dependencies	2025-11-17T13:33:36.4349796Z 115 packages are looking for funding
+backend-tests	Install backend dependencies	2025-11-17T13:33:36.4350496Z   run `npm fund` for details
+backend-tests	Install backend dependencies	2025-11-17T13:33:36.4980906Z 
+backend-tests	Install backend dependencies	2025-11-17T13:33:36.5302339Z 32 vulnerabilities (2 low, 29 moderate, 1 critical)
+backend-tests	Install backend dependencies	2025-11-17T13:33:36.5302666Z 
+backend-tests	Install backend dependencies	2025-11-17T13:33:36.5302922Z To address issues that do not require attention, run:
+backend-tests	Install backend dependencies	2025-11-17T13:33:36.5303229Z   npm audit fix
+backend-tests	Install backend dependencies	2025-11-17T13:33:36.5303378Z 
+backend-tests	Install backend dependencies	2025-11-17T13:33:36.5303593Z To address all issues (including breaking changes), run:
+backend-tests	Install backend dependencies	2025-11-17T13:33:36.5303916Z   npm audit fix --force
+backend-tests	Install backend dependencies	2025-11-17T13:33:36.5304068Z 
+backend-tests	Install backend dependencies	2025-11-17T13:33:36.5304178Z Run `npm audit` for details.
+backend-tests	Run backend tests (CI)	﻿2025-11-17T13:33:36.5345536Z ##[group]Run npm --prefix backend run test:ci
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:36.5345935Z [36;1mnpm --prefix backend run test:ci[0m
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:36.5381531Z shell: /usr/bin/bash -e {0}
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:36.5381767Z env:
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:36.5381960Z   SKIP_STOCK_INTEGRATION: true
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:36.5382197Z ##[endgroup]
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:36.6635653Z 
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:36.6636239Z > rewash-backend@1.0.0 test:ci
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:36.6636660Z > SKIP_STOCK_INTEGRATION=true vitest --run
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:36.6636868Z 
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:36.9481424Z [33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:36.9750257Z 
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:36.9752288Z [1m[7m[36m RUN [39m[27m[22m [36mv2.1.9 [39m[90m/home/runner/work/stock-prediction-py/stock-prediction-py/backend[39m
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:36.9753122Z 
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0441381Z 
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0443339Z [31m⎯⎯⎯⎯[1m[7m Unhandled Rejection [27m[22m⎯⎯⎯⎯⎯[39m
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0446868Z [31m[1mFailed to load PostCSS config[22m: Failed to load PostCSS config (searchPath: /home/runner/work/stock-prediction-py/stock-prediction-py/backend): [Error] Loading PostCSS Plugin failed: Cannot find module '@tailwindcss/postcss'
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0449031Z Require stack:
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0460411Z - /home/runner/work/stock-prediction-py/stock-prediction-py/postcss.config.js
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0461056Z 
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0461660Z (@/home/runner/work/stock-prediction-py/stock-prediction-py/postcss.config.js)
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0462771Z Error: Loading PostCSS Plugin failed: Cannot find module '@tailwindcss/postcss'
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0463499Z Require stack:
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0464345Z - /home/runner/work/stock-prediction-py/stock-prediction-py/postcss.config.js
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0464952Z 
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0465556Z (@/home/runner/work/stock-prediction-py/stock-prediction-py/postcss.config.js)
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0467213Z     at load (file:///home/runner/work/stock-prediction-py/stock-prediction-py/backend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:33632:11)
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0469206Z     at file:///home/runner/work/stock-prediction-py/stock-prediction-py/backend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:33657:16
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0470636Z     at Array.map (<anonymous>)
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0471914Z     at plugins (file:///home/runner/work/stock-prediction-py/stock-prediction-py/backend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:33656:8)
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0473965Z     at processResult (file:///home/runner/work/stock-prediction-py/stock-prediction-py/backend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:33726:14)
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0476306Z     at file:///home/runner/work/stock-prediction-py/stock-prediction-py/backend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:33856:14[39m
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0477408Z 
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0477428Z 
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0477437Z 
+backend-tests	Run backend tests (CI)	2025-11-17T13:33:37.0797364Z ##[error]Process completed with exit code 1.
+backend-tests	Post Run actions/checkout@v4	﻿2025-11-17T13:33:37.0973564Z Post job cleanup.
+backend-tests	Post Run actions/checkout@v4	2025-11-17T13:33:37.2253240Z [command]/usr/bin/git version
+backend-tests	Post Run actions/checkout@v4	2025-11-17T13:33:37.2312349Z git version 2.51.2
+backend-tests	Post Run actions/checkout@v4	2025-11-17T13:33:37.2408533Z Temporarily overriding HOME='/home/runner/work/_temp/76d33fa3-01aa-4b4a-8886-522c55b3962f' before making global git config changes
+backend-tests	Post Run actions/checkout@v4	2025-11-17T13:33:37.2415226Z Adding repository directory to the temporary git global config as a safe directory
+backend-tests	Post Run actions/checkout@v4	2025-11-17T13:33:37.2429414Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/stock-prediction-py/stock-prediction-py
+backend-tests	Post Run actions/checkout@v4	2025-11-17T13:33:37.2588885Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+backend-tests	Post Run actions/checkout@v4	2025-11-17T13:33:37.2664211Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+backend-tests	Post Run actions/checkout@v4	2025-11-17T13:33:37.3053379Z fatal: No url found for submodule path 'myusersite' in .gitmodules
+backend-tests	Post Run actions/checkout@v4	2025-11-17T13:33:37.3136784Z ##[warning]The process '/usr/bin/git' failed with exit code 128
+backend-tests	Complete job	﻿2025-11-17T13:33:37.3247387Z Cleaning up orphan processes
+backend-tests	Complete job	2025-11-17T13:33:37.3621233Z Terminate orphan process: pid (2226) (node (vitest 1))
+backend-tests	Complete job	2025-11-17T13:33:37.3657794Z Terminate orphan process: pid (2233) (node (vitest 3))
+frontend-tests	Set up job	﻿2025-11-17T13:33:19.0499411Z Current runner version: '2.329.0'
+frontend-tests	Set up job	2025-11-17T13:33:19.0523992Z ##[group]Runner Image Provisioner
+frontend-tests	Set up job	2025-11-17T13:33:19.0524831Z Hosted Compute Agent
+frontend-tests	Set up job	2025-11-17T13:33:19.0525505Z Version: 20251016.436
+frontend-tests	Set up job	2025-11-17T13:33:19.0526224Z Commit: 8ab8ac8bfd662a3739dab9fe09456aba92132568
+frontend-tests	Set up job	2025-11-17T13:33:19.0526935Z Build Date: 2025-10-15T20:44:12Z
+frontend-tests	Set up job	2025-11-17T13:33:19.0527479Z ##[endgroup]
+frontend-tests	Set up job	2025-11-17T13:33:19.0528115Z ##[group]Operating System
+frontend-tests	Set up job	2025-11-17T13:33:19.0528647Z Ubuntu
+frontend-tests	Set up job	2025-11-17T13:33:19.0529117Z 24.04.3
+frontend-tests	Set up job	2025-11-17T13:33:19.0529614Z LTS
+frontend-tests	Set up job	2025-11-17T13:33:19.0530073Z ##[endgroup]
+frontend-tests	Set up job	2025-11-17T13:33:19.0530536Z ##[group]Runner Image
+frontend-tests	Set up job	2025-11-17T13:33:19.0531163Z Image: ubuntu-24.04
+frontend-tests	Set up job	2025-11-17T13:33:19.0531639Z Version: 20251112.124.1
+frontend-tests	Set up job	2025-11-17T13:33:19.0532692Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251112.124/images/ubuntu/Ubuntu2404-Readme.md
+frontend-tests	Set up job	2025-11-17T13:33:19.0534140Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251112.124
+frontend-tests	Set up job	2025-11-17T13:33:19.0535402Z ##[endgroup]
+frontend-tests	Set up job	2025-11-17T13:33:19.0536616Z ##[group]GITHUB_TOKEN Permissions
+frontend-tests	Set up job	2025-11-17T13:33:19.0538369Z Contents: read
+frontend-tests	Set up job	2025-11-17T13:33:19.0538981Z Metadata: read
+frontend-tests	Set up job	2025-11-17T13:33:19.0539528Z Packages: read
+frontend-tests	Set up job	2025-11-17T13:33:19.0539998Z ##[endgroup]
+frontend-tests	Set up job	2025-11-17T13:33:19.0542091Z Secret source: Actions
+frontend-tests	Set up job	2025-11-17T13:33:19.0542809Z Prepare workflow directory
+frontend-tests	Set up job	2025-11-17T13:33:19.0918760Z Prepare all required actions
+frontend-tests	Set up job	2025-11-17T13:33:19.0956493Z Getting action download info
+frontend-tests	Set up job	2025-11-17T13:33:19.5426724Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+frontend-tests	Set up job	2025-11-17T13:33:19.7004707Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+frontend-tests	Set up job	2025-11-17T13:33:19.9228376Z Complete job name: frontend-tests
+frontend-tests	Run actions/checkout@v4	﻿2025-11-17T13:33:19.9891260Z ##[group]Run actions/checkout@v4
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.9892120Z with:
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.9892618Z   repository: RakeshReddy26-bit/stock-prediction-py
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.9893386Z   token: ***
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.9893798Z   ssh-strict: true
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.9894204Z   ssh-user: git
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.9894605Z   persist-credentials: true
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.9895219Z   clean: true
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.9895633Z   sparse-checkout-cone-mode: true
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.9896127Z   fetch-depth: 1
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.9896508Z   fetch-tags: false
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.9896921Z   show-progress: true
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.9897327Z   lfs: false
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.9897709Z   submodules: false
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.9898125Z   set-safe-directory: true
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:19.9898802Z ##[endgroup]
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.1012410Z Syncing repository: RakeshReddy26-bit/stock-prediction-py
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.1014298Z ##[group]Getting Git version info
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.1015457Z Working directory is '/home/runner/work/stock-prediction-py/stock-prediction-py'
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.1016661Z [command]/usr/bin/git version
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.1953609Z git version 2.51.2
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.1981890Z ##[endgroup]
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2005556Z Temporarily overriding HOME='/home/runner/work/_temp/e3b536b3-4aea-45ab-bd0c-0646aa039312' before making global git config changes
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2007900Z Adding repository directory to the temporary git global config as a safe directory
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2012209Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/stock-prediction-py/stock-prediction-py
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2088184Z Deleting the contents of '/home/runner/work/stock-prediction-py/stock-prediction-py'
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2091943Z ##[group]Initializing the repository
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2096972Z [command]/usr/bin/git init /home/runner/work/stock-prediction-py/stock-prediction-py
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2726048Z hint: Using 'master' as the name for the initial branch. This default branch name
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2727234Z hint: is subject to change. To configure the initial branch name to use in all
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2728291Z hint: of your new repositories, which will suppress this warning, call:
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2729306Z hint:
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2729824Z hint: 	git config --global init.defaultBranch <name>
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2730443Z hint:
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2731029Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2732002Z hint: 'development'. The just-created branch can be renamed via this command:
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2732763Z hint:
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2733167Z hint: 	git branch -m <name>
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2733635Z hint:
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2734268Z hint: Disable this message with "git config set advice.defaultBranchName false"
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2763040Z Initialized empty Git repository in /home/runner/work/stock-prediction-py/stock-prediction-py/.git/
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2776119Z [command]/usr/bin/git remote add origin https://github.com/RakeshReddy26-bit/stock-prediction-py
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2854670Z ##[endgroup]
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2855578Z ##[group]Disabling automatic garbage collection
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2858974Z [command]/usr/bin/git config --local gc.auto 0
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2887062Z ##[endgroup]
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2887762Z ##[group]Setting up auth
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2893866Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.2922987Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.4313907Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.4344717Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.4562315Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.4599229Z ##[endgroup]
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.4600478Z ##[group]Fetching the repository
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:20.4609270Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +6fccf00a8f30bb9ca9ce396bff60bd4aecc56753:refs/remotes/origin/main
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:23.1336884Z From https://github.com/RakeshReddy26-bit/stock-prediction-py
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:23.1338965Z  * [new ref]         6fccf00a8f30bb9ca9ce396bff60bd4aecc56753 -> origin/main
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:23.1410623Z ##[endgroup]
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:23.1411914Z ##[group]Determining the checkout info
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:23.1413449Z ##[endgroup]
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:23.1418894Z [command]/usr/bin/git sparse-checkout disable
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:23.1498632Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:23.1530598Z ##[group]Checking out the ref
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:23.1532943Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:23.8008719Z Switched to a new branch 'main'
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:23.8009652Z branch 'main' set up to track 'origin/main'.
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:23.8044641Z ##[endgroup]
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:23.8082686Z [command]/usr/bin/git log -1 --format=%H
+frontend-tests	Run actions/checkout@v4	2025-11-17T13:33:23.8105612Z 6fccf00a8f30bb9ca9ce396bff60bd4aecc56753
+frontend-tests	Use Node.js	﻿2025-11-17T13:33:23.8335858Z ##[group]Run actions/setup-node@v4
+frontend-tests	Use Node.js	2025-11-17T13:33:23.8336323Z with:
+frontend-tests	Use Node.js	2025-11-17T13:33:23.8336570Z   node-version: 18
+frontend-tests	Use Node.js	2025-11-17T13:33:23.8336831Z   always-auth: false
+frontend-tests	Use Node.js	2025-11-17T13:33:23.8337081Z   check-latest: false
+frontend-tests	Use Node.js	2025-11-17T13:33:23.8337496Z   token: ***
+frontend-tests	Use Node.js	2025-11-17T13:33:23.8337734Z ##[endgroup]
+frontend-tests	Use Node.js	2025-11-17T13:33:24.0478671Z Attempting to download 18...
+frontend-tests	Use Node.js	2025-11-17T13:33:24.9031832Z Acquiring 18.20.8 - x64 from https://github.com/actions/node-versions/releases/download/18.20.8-14110393767/node-18.20.8-linux-x64.tar.gz
+frontend-tests	Use Node.js	2025-11-17T13:33:25.4490281Z Extracting ...
+frontend-tests	Use Node.js	2025-11-17T13:33:25.4597616Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/ee025838-90d6-4935-83b9-60a9a26b50fd -f /home/runner/work/_temp/a6215d1c-f52c-4ad7-9212-d64ea5f67859
+frontend-tests	Use Node.js	2025-11-17T13:33:26.4795317Z Adding to the cache ...
+frontend-tests	Use Node.js	2025-11-17T13:33:28.1612980Z ##[group]Environment details
+frontend-tests	Use Node.js	2025-11-17T13:33:28.4713530Z node: v18.20.8
+frontend-tests	Use Node.js	2025-11-17T13:33:28.4714592Z npm: 10.8.2
+frontend-tests	Use Node.js	2025-11-17T13:33:28.4715244Z yarn: 1.22.22
+frontend-tests	Use Node.js	2025-11-17T13:33:28.4716031Z ##[endgroup]
+frontend-tests	Install frontend dependencies	﻿2025-11-17T13:33:28.4872823Z ##[group]Run npm ci --prefix frontend
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:28.4873233Z [36;1mnpm ci --prefix frontend[0m
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:28.4911914Z shell: /usr/bin/bash -e {0}
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:28.4912192Z ##[endgroup]
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0730793Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0731711Z npm warn EBADENGINE   package: 'lru-cache@11.2.2',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0732477Z npm warn EBADENGINE   required: { node: '20 || >=22' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0733247Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0733822Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0734301Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0734920Z npm warn EBADENGINE   package: 'lru-cache@11.2.2',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0735898Z npm warn EBADENGINE   required: { node: '20 || >=22' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0736663Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0737243Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0739365Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0740124Z npm warn EBADENGINE   package: '@firebase/ai@2.4.0',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0740818Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0741481Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0741829Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0744774Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0745645Z npm warn EBADENGINE   package: '@firebase/app@0.14.4',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0746304Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0747019Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0747590Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0748084Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0748734Z npm warn EBADENGINE   package: '@firebase/app-check@0.11.0',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0749411Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0750121Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0750690Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0751156Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0751875Z npm warn EBADENGINE   package: '@firebase/app-check-compat@0.4.0',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0752581Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0753286Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0753846Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0754333Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0754910Z npm warn EBADENGINE   package: '@firebase/app-compat@0.5.4',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0755530Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0756277Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0756895Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0757344Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0758055Z npm warn EBADENGINE   package: '@firebase/auth-compat@0.6.0',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0758758Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0759461Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0759999Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0760438Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0761055Z npm warn EBADENGINE   package: '@firebase/auth@1.11.0',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0761697Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0762398Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0762934Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0763371Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0764353Z npm warn EBADENGINE   package: '@firebase/component@0.7.0',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0765172Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0765899Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0766447Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0767284Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0767919Z npm warn EBADENGINE   package: '@firebase/database@1.1.0',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0768594Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0769292Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0769833Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0770270Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0770950Z npm warn EBADENGINE   package: '@firebase/database-compat@2.1.0',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0771642Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0772340Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0772887Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0773324Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0773963Z npm warn EBADENGINE   package: '@firebase/firestore@4.9.2',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0774627Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0775497Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0776043Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0776476Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0777161Z npm warn EBADENGINE   package: '@firebase/firestore-compat@0.4.2',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0777858Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0778360Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0778686Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0778955Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0779393Z npm warn EBADENGINE   package: '@firebase/functions@0.13.1',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0780102Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0780807Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0781362Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0781802Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0782482Z npm warn EBADENGINE   package: '@firebase/functions-compat@0.4.1',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0783047Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0783454Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0783773Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0784030Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0784391Z npm warn EBADENGINE   package: '@firebase/logger@0.5.0',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0784780Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0785448Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0785772Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0786047Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0786677Z npm warn EBADENGINE   package: '@firebase/storage@0.14.0',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0787341Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0787969Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0788523Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0788841Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0789252Z npm warn EBADENGINE   package: '@firebase/storage-compat@0.4.0',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0789661Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0790081Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0790390Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0790654Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0791023Z npm warn EBADENGINE   package: '@firebase/util@1.13.0',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0791436Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0792381Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0792909Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0793202Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0793602Z npm warn EBADENGINE   package: '@vitejs/plugin-react@5.1.0',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0794057Z npm warn EBADENGINE   required: { node: '^20.19.0 || >=22.12.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0794678Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0795203Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0795492Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0795833Z npm warn EBADENGINE   package: 'cssstyle@5.3.1',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0796207Z npm warn EBADENGINE   required: { node: '>=20' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0796628Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0796948Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0797214Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0797585Z npm warn EBADENGINE   package: 'data-urls@6.0.0',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0798244Z npm warn EBADENGINE   required: { node: '>=20' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0798906Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0799235Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0799511Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0799886Z npm warn EBADENGINE   package: '@firebase/auth@1.11.0',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0800272Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0800703Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0801018Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0801291Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0801629Z npm warn EBADENGINE   package: 'jsdom@27.0.1',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0801980Z npm warn EBADENGINE   required: { node: '>=20' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0802392Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0802708Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0870741Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0871511Z npm warn EBADENGINE   package: 'react-router@7.9.5',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0872349Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0873228Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0873805Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0874306Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0875260Z npm warn EBADENGINE   package: 'react-router-dom@7.9.5',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0875955Z npm warn EBADENGINE   required: { node: '>=20.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0876697Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0877259Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0877808Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0878432Z npm warn EBADENGINE   package: 'tr46@6.0.0',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0879042Z npm warn EBADENGINE   required: { node: '>=20' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0879843Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0880477Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0880979Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0881592Z npm warn EBADENGINE   package: 'vite@7.1.12',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0882338Z npm warn EBADENGINE   required: { node: '^20.19.0 || >=22.12.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0883199Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0883800Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0884279Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0884878Z npm warn EBADENGINE   package: 'vitest@4.0.5',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0885948Z npm warn EBADENGINE   required: { node: '^20.0.0 || ^22.0.0 || >=24.0.0' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0886834Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0887426Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0887950Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0888755Z npm warn EBADENGINE   package: 'webidl-conversions@8.0.0',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0889831Z npm warn EBADENGINE   required: { node: '>=20' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0890312Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0890661Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0890947Z npm warn EBADENGINE Unsupported engine {
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0891498Z npm warn EBADENGINE   package: 'whatwg-url@15.1.0',
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0891902Z npm warn EBADENGINE   required: { node: '>=20' },
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0892345Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:29.0892681Z npm warn EBADENGINE }
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:30.5898798Z npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:30.9999441Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:31.1017830Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:39.2357932Z 
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:39.2358854Z added 438 packages, and audited 439 packages in 11s
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:39.2359513Z 
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:39.2360189Z 56 packages are looking for funding
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:39.2360740Z   run `npm fund` for details
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:39.2369839Z 
+frontend-tests	Install frontend dependencies	2025-11-17T13:33:39.2370180Z found 0 vulnerabilities
+frontend-tests	Run frontend tests (CI)	﻿2025-11-17T13:33:39.2700548Z ##[group]Run npm --prefix frontend run test -- --run
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.2700948Z [36;1mnpm --prefix frontend run test -- --run[0m
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.2739904Z shell: /usr/bin/bash -e {0}
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.2740141Z ##[endgroup]
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.4062460Z 
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.4063471Z > frontend-app@0.1.0 test
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.4063915Z > vitest --run
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.4064109Z 
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7100565Z [31mfailed to load config from /home/runner/work/stock-prediction-py/stock-prediction-py/frontend/vitest.config.ts[39m
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7103728Z 
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7104697Z [31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Startup Error [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯⎯[39m
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7121031Z Error [ERR_REQUIRE_ESM]: require() of ES Module /home/runner/work/stock-prediction-py/stock-prediction-py/frontend/node_modules/vite/dist/node/index.js from /home/runner/work/stock-prediction-py/stock-prediction-py/frontend/node_modules/vitest/dist/config.cjs not supported.
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7123536Z Instead change the require of index.js in /home/runner/work/stock-prediction-py/stock-prediction-py/frontend/node_modules/vitest/dist/config.cjs to a dynamic import() which is available in all CommonJS modules.
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7126098Z     at _require.extensions.<computed> [as .js] (file:///home/runner/work/stock-prediction-py/stock-prediction-py/frontend/node_modules/vite/dist/node/chunks/config.js:36139:9)
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7128159Z     at Object.<anonymous> (/home/runner/work/stock-prediction-py/stock-prediction-py/frontend/node_modules/vitest/dist/config.cjs:5:12)
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7129582Z     at _require.extensions.<computed> [as .js] (file:///home/runner/work/stock-prediction-py/stock-prediction-py/frontend/node_modules/vite/dist/node/chunks/config.js:36139:9)
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7130840Z     at Object.<anonymous> (/home/runner/work/stock-prediction-py/stock-prediction-py/frontend/vitest.config.ts:36:21)
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7132036Z     at _require.extensions.<computed> [as .js] (file:///home/runner/work/stock-prediction-py/stock-prediction-py/frontend/node_modules/vite/dist/node/chunks/config.js:36138:44)
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7133203Z     at loadConfigFromBundledFile (file:///home/runner/work/stock-prediction-py/stock-prediction-py/frontend/node_modules/vite/dist/node/chunks/config.js:36142:15)
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7134357Z     at async bundleAndLoadConfigFile (file:///home/runner/work/stock-prediction-py/stock-prediction-py/frontend/node_modules/vite/dist/node/chunks/config.js:36014:17)
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7135768Z     at async loadConfigFromFile (file:///home/runner/work/stock-prediction-py/stock-prediction-py/frontend/node_modules/vite/dist/node/chunks/config.js:35981:42)
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7137196Z     at async resolveConfig (file:///home/runner/work/stock-prediction-py/stock-prediction-py/frontend/node_modules/vite/dist/node/chunks/config.js:35632:22)
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7138267Z     at async _createServer (file:///home/runner/work/stock-prediction-py/stock-prediction-py/frontend/node_modules/vite/dist/node/chunks/config.js:27938:67)
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7139404Z     at async createViteServer (file:///home/runner/work/stock-prediction-py/stock-prediction-py/frontend/node_modules/vitest/dist/chunks/cli-api.6GYRwzrM.js:8441:17)
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7140546Z     at async createVitest (file:///home/runner/work/stock-prediction-py/stock-prediction-py/frontend/node_modules/vitest/dist/chunks/cli-api.6GYRwzrM.js:11217:14)
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7141688Z     at async prepareVitest (file:///home/runner/work/stock-prediction-py/stock-prediction-py/frontend/node_modules/vitest/dist/chunks/cli-api.6GYRwzrM.js:11502:61)
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7142830Z     at async startVitest (file:///home/runner/work/stock-prediction-py/stock-prediction-py/frontend/node_modules/vitest/dist/chunks/cli-api.6GYRwzrM.js:11472:61)
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7143938Z     at async start (file:///home/runner/work/stock-prediction-py/stock-prediction-py/frontend/node_modules/vitest/dist/chunks/cac.Be29vze6.js:1297:107) {
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7144556Z   code: 'ERR_REQUIRE_ESM'
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7145277Z }
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7145380Z 
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7145388Z 
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7145393Z 
+frontend-tests	Run frontend tests (CI)	2025-11-17T13:33:39.7264228Z ##[error]Process completed with exit code 1.
+frontend-tests	Post Run actions/checkout@v4	﻿2025-11-17T13:33:39.7364135Z Post job cleanup.
+frontend-tests	Post Run actions/checkout@v4	2025-11-17T13:33:39.8311856Z [command]/usr/bin/git version
+frontend-tests	Post Run actions/checkout@v4	2025-11-17T13:33:39.8348714Z git version 2.51.2
+frontend-tests	Post Run actions/checkout@v4	2025-11-17T13:33:39.8394302Z Temporarily overriding HOME='/home/runner/work/_temp/c5adda8b-5547-4475-8c20-813372cfea89' before making global git config changes
+frontend-tests	Post Run actions/checkout@v4	2025-11-17T13:33:39.8395967Z Adding repository directory to the temporary git global config as a safe directory
+frontend-tests	Post Run actions/checkout@v4	2025-11-17T13:33:39.8408447Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/stock-prediction-py/stock-prediction-py
+frontend-tests	Post Run actions/checkout@v4	2025-11-17T13:33:39.8443634Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+frontend-tests	Post Run actions/checkout@v4	2025-11-17T13:33:39.8476655Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+frontend-tests	Post Run actions/checkout@v4	2025-11-17T13:33:39.8692015Z fatal: No url found for submodule path 'myusersite' in .gitmodules
+frontend-tests	Post Run actions/checkout@v4	2025-11-17T13:33:39.8731174Z ##[warning]The process '/usr/bin/git' failed with exit code 128
+frontend-tests	Complete job	﻿2025-11-17T13:33:39.8809404Z Cleaning up orphan processes
