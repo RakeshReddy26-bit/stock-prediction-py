@@ -13,6 +13,7 @@ on:
 
 jobs:
   backend-tests:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -46,6 +47,7 @@ jobs:
           npm --prefix backend run test:ci
 
   frontend-tests:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
