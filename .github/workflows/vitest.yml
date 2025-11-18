@@ -3,8 +3,13 @@ name: Vitest per-project
 on:
   push:
     branches: [ main ]
+    # avoid running vitest workflow for commits that only change the stock project
+    paths-ignore:
+      - 'projects/stock-prediction/**'
   pull_request:
     branches: [ main ]
+    paths-ignore:
+      - 'projects/stock-prediction/**'
 
 jobs:
   backend-tests:
