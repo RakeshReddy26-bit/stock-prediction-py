@@ -1,1 +1,1 @@
-{"ticker": "SAMPLE", "model_path": "/Users/rakeshreddy/rewash/projects/stock-prediction/stock_market_prediction/models/lstm_SAMPLE_20251028223826.keras", "scaler_min_": [-1.7344235883932473], "scaler_scale_": [0.023969716833732318], "created_at": "20251028223826", "hash": "74a490cc5a62"}
+{"ticker": "SAMPLE", "model_path": "models/lstm_SAMPLE_20251028223826.keras", "scaler_min_": [-1.7344235883932473], "scaler_scale_": [0.023969716833732318], "created_at": "20251028223826", "hash": "74a490cc5a62"}
