@@ -30,6 +30,10 @@ jobs:
       - name: Install backend dependencies
         run: |
           npm ci --prefix backend
+      - name: Emergency: ensure tailwindcss available (no-save)
+        run: |
+          # Emergency no-save install so PostCSS can load tailwindcss during CI
+          npm install tailwindcss --no-save --no-audit || true
       - name: Run backend tests (CI)
         env:
           SKIP_STOCK_INTEGRATION: 'true'
@@ -59,6 +63,9 @@ jobs:
       - name: Install frontend dependencies
         run: |
           npm ci --prefix frontend
+      - name: Emergency: ensure tailwindcss available for frontend (no-save)
+        run: |
+          npm install tailwindcss --no-save --no-audit || true
       - name: Run frontend tests (CI)
         run: |
           npm --prefix frontend run test -- --run

@@ -53,6 +53,12 @@ jobs:
             npm install
           fi
 
+      - name: Emergency: ensure tailwindcss available at root (no-save)
+        if: "(exists('package.json') || exists('postcss.config.js'))"
+        run: |
+          echo "Emergency: installing tailwindcss at repo root (no-save)"
+          npm install tailwindcss --no-save --no-audit || true
+
       - name: Install backend node deps (if present)
         if: "exists('backend/package.json')"
         steps:
