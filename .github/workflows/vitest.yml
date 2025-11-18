@@ -15,6 +15,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+      - name: Install root node deps (if present)
+        run: |
+          if [ -f package.json ]; then
+            echo "Installing root node dependencies"
+            if [ -f package-lock.json ]; then
+              npm ci
+            else
+              npm install
+            fi
+          else
+            echo "No root package.json — skipping root install"
+          fi
       - name: Install backend dependencies
         run: |
           npm ci --prefix backend
@@ -32,6 +44,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+      - name: Install root node deps (if present)
+        run: |
+          if [ -f package.json ]; then
+            echo "Installing root node dependencies"
+            if [ -f package-lock.json ]; then
+              npm ci
+            else
+              npm install
+            fi
+          else
+            echo "No root package.json — skipping root install"
+          fi
       - name: Install frontend dependencies
         run: |
           npm ci --prefix frontend
