@@ -1,6 +1,0 @@
-<button
-  className="w-full px-5 py-3 rounded-xl bg-black text-white font-semibold text-base hover:bg-gray-900 transition flex items-center justify-center gap-2"
-  onClick={() => handleAddToOrder({ label: "Suit", price: "₹250/item" })}
->
-  + Add to Order
-</button>

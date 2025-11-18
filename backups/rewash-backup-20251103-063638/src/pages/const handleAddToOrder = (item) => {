@@ -1,7 +1,0 @@
-const handleAddToOrder = (item) => {
-  console.log("Adding item:", item);
-  setSelectedItems((prevItems) => {
-    console.log("Previous items:", prevItems);
-    return [...prevItems, item];
-  });
-};
