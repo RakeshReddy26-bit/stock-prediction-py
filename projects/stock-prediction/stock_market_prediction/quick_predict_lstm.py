@@ -21,8 +21,7 @@ LOOKBACK = 60
 
 MODELS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'models'))
 LEGACY_MODEL_CANDIDATES: List[str] = [
-    os.path.abspath(os.path.join(os.path.dirname(__file__), 'lstm_stock_model.h5')),
-    '/Users/rakeshreddy/rewash/stock_market_prediction/lstm_stock_model.h5',
+    os.path.abspath(os.path.join(MODELS_DIR, 'lstm_stock_model.h5')),
 ]
 
 
