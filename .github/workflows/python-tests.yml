@@ -1,26 +1,42 @@
-# ensure this is inside the job's steps: section
-- name: Checkout code
-  uses: actions/checkout@v4
-  with:
-    fetch-depth: 0
-    persist-credentials: true
-    lfs: false
-    submodules: false
+name: Python tests (root)
 
-- name: Setup Python
-  uses: actions/setup-python@v4
-  with:
-    python-version: "3.10"
+on:
+  push:
+    branches: [ main ]
+    # don't run this workflow for stock-only commits
+    paths-ignore:
+      - 'projects/stock-prediction/**'
+  pull_request:
+    branches: [ main ]
+    paths-ignore:
+      - 'projects/stock-prediction/**'
 
-- name: Install minimal deps
-  run: |
-    python -m pip install --upgrade pip
-    pip install pandas joblib pytest httpx
-  env:
-    PIP_NO_CACHE_DIR: "off"
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+          lfs: false
+          submodules: false
 
-- name: Run tests (skip heavy models)
-  env:
-    SKIP_MODELS: "1"
-  run: |
-    pytest -q
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install minimal deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas joblib pytest httpx
+        env:
+          PIP_NO_CACHE_DIR: "off"
+
+      - name: Run tests (skip heavy models)
+        env:
+          SKIP_MODELS: "1"
+        run: |
+          pytest -q
