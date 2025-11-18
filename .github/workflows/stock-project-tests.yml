@@ -33,12 +33,22 @@ jobs:
           # Install the package in editable mode so tests can import `src`.
           python -m pip install -e .
 
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          # Cache pip's cache directory to speed up installs between runs
+          path: |
+            ~/.cache/pip
+          key: "${{ runner.os }}-pip-${{ hashFiles('projects/stock-prediction/stock_market_prediction/requirements.txt') }}"
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
       - name: Install test-related dependencies
         working-directory: projects/stock-prediction/stock_market_prediction
         run: |
           . .venv/bin/activate
-          # Install only lightweight deps required for tests (do NOT install heavy ML deps)
-          python -m pip install pytest fastapi httpx requests pandas pydantic joblib
+          # Install lightweight deps required for tests using a single dev requirements file
+          python -m pip install -r requirements-dev.txt
 
       - name: Run tests (skip heavy models)
         working-directory: projects/stock-prediction/stock_market_prediction
