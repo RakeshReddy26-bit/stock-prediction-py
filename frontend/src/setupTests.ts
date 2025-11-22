@@ -1,2 +1,2 @@
-// Setup for frontend tests with Testing Library and JSDOM
-import '@testing-library/jest-dom';
+// Minimal setup for Vitest tests in this project
+import '@testing-library/jest-dom'

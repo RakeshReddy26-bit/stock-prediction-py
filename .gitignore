@@ -3,14 +3,12 @@ __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-*.sqlite3
 
-# Env
-.env
+# Virtual environments
 .venv/
-env/
 venv/
-.envrc
+.venv_test/
+.venv_test
 
 # Data & models
 models/
@@ -24,29 +22,13 @@ data/
 # OS
 .DS_Store
 
-# Node (UI)
+# Node
 node_modules/
 dist/
 build/
 
-# VSCode
+# IDE
 .vscode/
-stock_market_prediction/run-*.log
-
-# Ignore large backup/dist artifacts created during triage
-backups/dist-backup-*/
-backups/build-backup-*/
-backups/.venv-backup-*/
-# Ignore build/assets inside backups
-backups/*/build/
-backups/*/build/**
-backups/*/dist/
-backups/*/dist/**
-# Ignore run logs and other CI artifacts in root/backups
-run-*.log
-backups/*.log
-.venv/
 .venv-tf/
-.venv_test/
+.venv/
 venv/
-**/site-packages/

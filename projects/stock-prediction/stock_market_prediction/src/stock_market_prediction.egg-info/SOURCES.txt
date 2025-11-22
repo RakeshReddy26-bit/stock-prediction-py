@@ -1,9 +1,0 @@
-README.md
-pyproject.toml
-setup.cfg
-src/data/__init__.py
-src/stock_market_prediction.egg-info/PKG-INFO
-src/stock_market_prediction.egg-info/SOURCES.txt
-src/stock_market_prediction.egg-info/dependency_links.txt
-src/stock_market_prediction.egg-info/top_level.txt
-tests/test_api.py

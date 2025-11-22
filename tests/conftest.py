@@ -1,5 +1,6 @@
 import sys
 import types
+import os
 
 # Create package placeholders so imports like `from src.models.lstm_service import ...`
 # will find our lightweight test stubs and avoid importing TensorFlow during collection.
@@ -7,12 +8,25 @@ import types
 def _make_pkg(name):
     if name not in sys.modules:
         m = types.ModuleType(name)
+        # mark as a package/namespace so imports like `src.api` resolve correctly
+        m.__path__ = []
         sys.modules[name] = m
     return sys.modules[name]
 
 # ensure 'src' and 'src.models' packages exist
 _make_pkg('src')
 _make_pkg('src.models')
+
+# Point the dynamic package modules at the real source directories so
+# imports like `src.api` will be resolved by the normal import machinery.
+_ROOT = os.path.dirname(os.path.dirname(__file__))
+_SRC_DIR = os.path.join(_ROOT, 'src')
+if os.path.isdir(_SRC_DIR):
+    sys.modules['src'].__path__ = [_SRC_DIR]
+    _MODELS_DIR = os.path.join(_SRC_DIR, 'models')
+    if os.path.isdir(_MODELS_DIR):
+        # allow imports under src.models to resolve
+        sys.modules['src.models'].__path__ = [_MODELS_DIR]
 
 # provide a lightweight stub module for src.models.lstm_service
 if 'src.models.lstm_service' not in sys.modules:
