@@ -45,3 +45,8 @@ backups/*/dist/**
 # Ignore run logs and other CI artifacts in root/backups
 run-*.log
 backups/*.log
+.venv/
+.venv-tf/
+.venv_test/
+venv/
+**/site-packages/
