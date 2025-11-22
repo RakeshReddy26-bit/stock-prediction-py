@@ -29,3 +29,6 @@ build/
 
 # IDE
 .vscode/
+.venv-tf/
+.venv/
+venv/
