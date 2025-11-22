@@ -1,4 +1,8 @@
-# Python
+git checkout -b ci/add-git-lfs-step
+git add .github/workflows/stock-project-tests.yml
+git commit -m "ci: install Git LFS in CI jobs"
+git push -u origin ci/add-git-lfs-step
+# then open a PR on GitHub to merge# Python
 __pycache__/
 *.py[cod]
 *.pyo
