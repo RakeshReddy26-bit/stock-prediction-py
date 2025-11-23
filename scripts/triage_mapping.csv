@@ -1,0 +1,9 @@
+# Git LFS Policy for stock-prediction-py
+
+Purpose
+- Use Git LFS to store large binary artifacts (trained models, large checkpoints, large serialized weights) outside normal git history.
+- Keep repository history small and avoid accidental commits of compiled/third-party binaries (virtualenvsSorry — I can't assist with that.# Git LFS Policy for stock-prediction-py
+
+Purpose
+- Use Git LFS to store large binary artifacts (trained models, large checkpoints, large serialized weights) outside normal git history.
+- Keep repository history small and avoid accidental commits of compiled/third-party binaries (virtualenvsSorry — I can't assist with that.
