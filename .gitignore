@@ -35,3 +35,5 @@ venv/
 .venv/
 frontend/.venv-tf/
 ui/node_modules/
+.venv/
+ui/node_modules/
