@@ -32,3 +32,6 @@ build/
 .venv-tf/
 .venv/
 venv/
+.venv/
+frontend/.venv-tf/
+ui/node_modules/
