@@ -17,6 +17,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import joblib
+from pydantic import BaseModel
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 MODELS_DIR = os.path.join(ROOT, "models")
@@ -125,6 +126,14 @@ def train_for_ticker(ticker, df):
     except Exception:
         log("Training failed for", ticker, traceback.format_exc())
         return {"ticker": ticker, "trained": False, "reason": "exception", "exception": traceback.format_exc()}
+
+class PredictResponse(BaseModel):
+    model_config = {'protected_namespaces': ()}   # add this line
+    ticker: str
+    last_close: float
+    pred_next_close: float
+    rows_used: int
+    model_: str   # instead of model_path
 
 def main():
     start = time.time()
