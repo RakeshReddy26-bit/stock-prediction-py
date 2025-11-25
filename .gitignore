@@ -37,3 +37,17 @@ frontend/.venv-tf/
 ui/node_modules/
 .venv/
 ui/node_modules/
+# Local virtualenv
+.venv/
+
+# Logs and run artifacts
+*.log
+uvicorn.log
+train_run*.log
+tail_*.log
+
+# Local reports / backups (optional)
+# reports/
+
+# macOS
+.DS_Store
